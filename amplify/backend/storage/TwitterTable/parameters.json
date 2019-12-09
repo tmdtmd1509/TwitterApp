@@ -1,0 +1,5 @@
+{
+    "tableName": "TwitterTable",
+    "partitionKeyName": "status",
+    "partitionKeyType": "S"
+}

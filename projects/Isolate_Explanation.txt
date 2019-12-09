@@ -1,0 +1,7 @@
+Explanation of how you isolated the client/server communication details.
+	I made the new folder called src/api. In api folder, I have actions.js, apiContext.js, apiCreateContext.js
+and apiReducer.js. I used Redux system to isolated the client/server communication. I do all the server side action calls at the api folder.
+apiContext.js has every function calls. It sends the request and get the response from the server.
+Client only needs to import apiContext.js file and use use specific function in the apiContext.js to communicate with server.
+After it receives the response, it will update the response to global state. Client only need to check if the state gets changed or not.
+If it got changed it means request got the response.

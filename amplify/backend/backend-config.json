@@ -1,0 +1,17 @@
+{
+	"api": {},
+	"auth": {
+		"twitter": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"TwitterTable": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {}
+}

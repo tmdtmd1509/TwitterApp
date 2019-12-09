@@ -1,0 +1,40 @@
+Back-end layered architecture
+
+basic architecture:
+Client - Amazon API GateWay - lambda function - dynamoDB
+
+
+Amazon API GateWay:
+I have a 6 resources. Feed(get), followees(get, put), followers(get, put), hashtags(get), status(post), story(get,
+/{alias}(get))
+They get called by client and they trigger the each Amazon lambda function.
+
+
+Amazon Lambda Function:
+This get called by API methods.
+
+I have a 4 different Lambda function that triggered by API Gateway.
+1. get_story
+	This function only get the story of the alias's
+2. get
+	This does different thing by event's path.
+	feed: get alias's all the followers and followees and their statuses
+	followers: get alias's followers
+	followees: get alias's followees
+	hashtags: get all the statuses that has a certain hashtag
+3. put
+	This update the dynamoDB by request of API calls
+	This does different thing by event's path.
+	followees: update followees of alias's
+	followers: update followers of alias's
+	user: update user's followers and followees
+4. post
+	This function only post a new status by alias
+
+If function needs to access to database and get the information, it get, post or update dynomaDB's table items.
+After function get data from database, each lambda function response with 200, 404, 502 and asked datas.
+
+DynamoDB:
+I have 5 tables.
+feed, followees, followers, picture, and status.
+

@@ -1,0 +1,62 @@
+{
+    "test": {
+        "awscloudformation": {
+            "AuthRoleName": "tracks-test-20191014215052-authRole",
+            "UnauthRoleArn": "arn:aws:iam::473013781252:role/tracks-test-20191014215052-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::473013781252:role/tracks-test-20191014215052-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "tracks-test-20191014215052-deployment",
+            "UnauthRoleName": "tracks-test-20191014215052-unauthRole",
+            "StackName": "tracks-test-20191014215052",
+            "StackId": "arn:aws:cloudformation:us-west-2:473013781252:stack/tracks-test-20191014215052/fbc42370-eefe-11e9-8f3c-06bfbb1996ee"
+        },
+        "categories": {
+            "auth": {
+                "tracks82cfeac0": {}
+            },
+            "function": {
+                "TwitterFunction": {},
+                "TwitterTable": {}
+            }
+        }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "tracks-dev-20191028155802-authRole",
+            "UnauthRoleArn": "arn:aws:iam::473013781252:role/tracks-dev-20191028155802-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::473013781252:role/tracks-dev-20191028155802-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "tracks-dev-20191028155802-deployment",
+            "UnauthRoleName": "tracks-dev-20191028155802-unauthRole",
+            "StackName": "tracks-dev-20191028155802",
+            "StackId": "arn:aws:cloudformation:us-west-2:473013781252:stack/tracks-dev-20191028155802/029d6740-f9ce-11e9-96df-0a59d1b75b46"
+        },
+        "categories": {
+            "auth": {
+                "twitter": {}
+            }
+        }
+    },
+    "twitter": {
+        "awscloudformation": {
+            "AuthRoleName": "tracks-twitter-20191030011015-authRole",
+            "UnauthRoleArn": "arn:aws:iam::473013781252:role/tracks-twitter-20191030011015-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::473013781252:role/tracks-twitter-20191030011015-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "tracks-twitter-20191030011015-deployment",
+            "UnauthRoleName": "tracks-twitter-20191030011015-unauthRole",
+            "StackName": "tracks-twitter-20191030011015",
+            "StackId": "arn:aws:cloudformation:us-west-2:473013781252:stack/tracks-twitter-20191030011015/530c6700-fae4-11e9-9b60-0a4249d37cb6"
+        },
+        "categories": {
+            "auth": {
+                "tracks82cfeac0": {},
+                "twitter": {}
+            },
+            "function": {
+                "TwitterFunction": {},
+                "TwitterTable": {}
+            }
+        }
+    }
+}
